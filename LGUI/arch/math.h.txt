@@ -1,0 +1,45 @@
+#pragma once
+#include <cstddef>
+
+//wrapper
+namespace Math {
+
+    template <std::size_t D, typename T>
+    struct Vec
+    {
+        T data[D];
+
+        T& operator[](std::size_t i)
+        {
+            return data[i];
+        }
+
+        const T& operator[](std::size_t i) const
+        {
+            return data[i];
+        }
+
+        Vec operator+(const Vec& rhs) const
+        {
+            Vec result;
+
+            for (std::size_t i = 0; i < D; ++i)
+            {
+                result.data[i] = data[i] + rhs.data[i];
+            }
+
+            return result;
+        }
+
+        Vec& operator+=(const Vec& rhs)
+        {
+            for (std::size_t i = 0; i < D; ++i)
+            {
+                data[i] += rhs.data[i];
+            }
+
+            return *this;
+        }
+    };
+    
+}

@@ -1,0 +1,15 @@
+#include "graphics.h"
+#include <raylib.h>
+#include <iostream>
+
+Graphics::Graphics() {}
+
+void Graphics::_err(int n) const {
+    std::cerr   << "yes king"
+                << n
+                << "\n";
+}
+
+void Graphics::DrawRect(int posX, int posY, int width, int height, Color color) const {
+    DrawRectangle(posX, posY, width, height, color)
+}

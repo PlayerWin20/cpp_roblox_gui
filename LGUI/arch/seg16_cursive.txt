@@ -1,0 +1,351 @@
+        switch (Charelem::ch)
+        {          
+        case 'A': diagram = {
+                I, I, I, I, O, O, I, I,
+                O, O, O, I, O, O, O, I
+            }; offset = {ORG, ORG}; bounds = END; break;
+        case 'a': diagram = {
+                O, O, O, O, O, I, I, O,
+                O, O, O, O, I, I, O, I
+            }; offset = {ORG, ORG}; bounds = MID; break;     
+        case 'B': diagram = {
+                I, O, O, I, I, I, I, I,
+                O, I, O, I, O, O, O, I
+            }; offset = {ORG, ORG}; bounds = END; break;
+        case 'b': diagram = {
+                O, O, O, I, I, I, O, O,
+                O, I, O, I, O, I, O, I
+            }; offset = {ORG, ORG}; bounds = MID; break;
+        case 'C': diagram = {
+                I, I, O, O, I, I, I, I,
+                O, O, O, O, O, O, O, O
+            }; offset = {ORG, ORG}; bounds = END; break;
+        case 'c': diagram = {
+                I, I, O, O, O, O, O, O,
+                I, O, O, I, O, O, O, O
+            }; offset = {ORG, MID}; bounds = MID; break;     
+        case 'D': diagram = {
+                O, O, O, O, I, I, I, I,
+                I, O, O, O, I, O, O, O
+            }; offset = {ORG, ORG}; bounds = END; break;
+        case 'd': diagram = {
+                O, O, O, O, I, I, I, O,
+                O, I, O, I, O, I, O, I
+            }; offset = {ORG, ORG}; bounds = MID; break;   
+        case 'E': diagram = {
+                I, I, O, O, I, I, I, I,
+                O, O, O, I, O, O, O, I
+            }; offset = {ORG, ORG}; bounds = END; break;
+        case 'e': diagram = {
+                I, I, O, O, O, O, O, O,
+                I, O, I, I, O, O, O, O
+            }; offset = {ORG, MID}; bounds = MID; break;     
+        case 'F': diagram = {
+                I, I, O, O, O, O, I, I,
+                O, O, O, I, O, O, O, I
+            }; offset = {ORG, ORG}; bounds = END; break;
+        case 'f': diagram = {
+                O, O, O, O, O, I, I, O,
+                O, O, I, I, O, I, O, I
+            }; offset = {ORG, ORG}; bounds = MID; break;
+        case 'G': diagram = {
+                I, I, O, I, I, I, I, I,
+                O, O, O, I, O, O, O, O
+            }; offset = {ORG, ORG}; bounds = END; break;
+        case 'g': diagram = {
+                I, I, O, O, O, I, I, O,
+                I, I, O, I, O, I, O, I
+            }; offset = {ORG, MID}; bounds = MID; break;  
+        case 'H': diagram = {
+                O, O, I, I, O, O, I, I,
+                O, O, O, I, O, O, O, I
+            }; offset = {ORG, ORG}; bounds = END; break;
+        case 'h': diagram = {
+                O, I, O, I, O, O, I, O,
+                O, O, I, I, O, O, I, I
+            }; offset = {ORG, ORG}; bounds = MID; break;     
+        case 'I': diagram = {
+                I, I, O, O, I, I, O, O,
+                O, I, O, O, O, I, O, O
+            }; offset = {ORG, ORG}; bounds = END; break;
+        case 'i': diagram = {
+                O, O, O, O, I, I, O, O,
+                O, O, O, O, O, I, O, I,
+                I
+            }; offset = {ORG, ORG}; bounds = MID; break;
+        case 'J': diagram = {
+                O, O, I, I, I, I, I, O,
+                O, O, O, O, O, O, O, O
+            }; offset = {ORG, ORG}; bounds = END; break;
+        case 'j': diagram = {
+                I, O, O, O, O, O, O, O,
+                O, I, O, O, O, O, I, O,
+                I
+            }; offset = {ORG, MID}; bounds = MID; break;
+        case 'K': diagram = {
+                O, O, O, O, O, O, I, I,
+                O, O, I, O, I, O, O, I
+            }; offset = {ORG, ORG}; bounds = END; break;
+        case 'k': diagram = {
+                O, O, O, O, O, O, I, O, //outer
+                O, I, I, O, I, O, O, I, //inner
+            }; offset = {ORG, ORG}; bounds = MID; break;
+        case 'L': diagram = {
+                O, O, O, O, I, I, I, I,
+                O, O, O, O, O, O, O, O
+            }; offset = {ORG, ORG}; bounds = END; break;
+        case 'l': diagram = {
+                O, I, O, O, I, O, O, O,
+                O, I, I, O, O, I, O, I,
+            }; offset = {ORG, MID}; bounds = END; break;
+        case 'M': diagram = {
+                O, O, I, I, O, O, I, I,
+                I, O, I, O, O, O, O, O
+            }; offset = {ORG, ORG}; bounds = END; break;
+        case 'm': diagram = {
+                O, O, O, I, O, O, I, O,
+                O, O, O, I, O, I, I, O,
+            }; offset = {ORG, ORG}; bounds = MID; break;      
+        case 'N': diagram = {
+                O, O, I, I, O, O, I, I,
+                I, O, O, O, I, O, O, O
+            }; offset = {ORG, ORG}; bounds = END; break;   
+        case 'n': diagram = {
+                O, O, O, I, O, O, I, O,
+                O, O, O, I, O, O, I, O,
+            }; offset = {ORG, ORG}; bounds = MID; break;
+        case 'O': diagram = {
+                I, I, I, I, I, I, I, I,
+                O, O, O, O, O, O, O, O
+            }; offset = {ORG, ORG}; bounds = END; break;
+        case 'o': diagram = {
+                O, O, O, I, I, I, I, O,
+                O, O, O, I, O, O, O, I,
+            }; offset = {ORG, ORG}; bounds = MID; break;  
+        case 'P': diagram = {
+                I, I, I, O, O, O, I, I,
+                O, O, O, I, O, O, O, I
+            }; offset = {ORG, ORG}; bounds = END; break;
+        case 'p': diagram = {
+                O, O, O, I, I, I, I, O,
+                O, O, O, I, O, O, O, I,
+            }; offset = {ORG, ORG}; bounds = MID; break;
+        case 'Q': diagram = {
+                I, O, O, I, O, I, I, I,
+                O, I, O, I, O, I, O, O
+            }; offset = {ORG, ORG}; bounds = END; break;
+        case 'q': diagram = {
+                O, O, O, I, I, I, I, O,
+                O, O, O, I, O, O, O, I,
+            }; offset = {ORG, ORG}; bounds = MID; break;   
+        case 'R': diagram = {
+                I, I, I, O, O, O, I, I,
+                O, O, O, I, I, O, O, I
+            }; offset = {ORG, ORG}; bounds = END; break;
+        case 'r': diagram = {
+                O, O, O, I, I, I, I, O,
+                O, O, O, I, O, O, O, I,
+            }; offset = {ORG, ORG}; bounds = MID; break;
+        case 'S': diagram = {
+                I, I, O, I, I, I, O, I,
+                O, O, O, I, O, O, O, I
+            }; offset = {ORG, ORG}; bounds = END; break;
+        case 's': diagram = {
+                O, O, O, I, I, I, I, O,
+                O, O, O, I, O, O, O, I,
+            }; offset = {ORG, ORG}; bounds = MID; break;          
+        case 'T': diagram = {
+                I, I, O, O, O, O, O, O,
+                O, I, O, O, O, I, O, O
+            }; offset = {ORG, ORG}; bounds = END; break;
+        case 't': diagram = {
+                O, O, O, O, I, O, O, O,
+                O, I, O, I, O, I, O, I,
+            }; offset = {ORG, ORG}; bounds = MID; break;
+        case 'U': diagram = {
+                O, O, I, I, I, I, I, I,
+                O, O, O, O, O, O, O, O
+            }; offset = {ORG, ORG}; bounds = END; break;
+        case 'u': diagram = {
+                O, O, O, I, I, I, I, O,
+                O, O, O, I, O, O, O, I,
+            }; offset = {ORG, ORG}; bounds = MID; break;        
+        case 'V': diagram = {
+                O, O, O, O, O, O, I, I,
+                O, O, I, O, O, O, I, O
+            }; offset = {ORG, ORG}; bounds = END; break;
+        case 'v': diagram = {
+                O, O, O, I, I, I, I, O,
+                O, O, O, I, O, O, O, I,
+            }; offset = {ORG, ORG}; bounds = MID; break;
+        case 'W': diagram = {
+                O, O, I, I, O, O, I, I,
+                O, O, O, O, I, O, I, O
+            }; offset = {ORG, ORG}; bounds = END; break;
+        case 'w': diagram = {
+                O, O, O, I, I, I, I, O,
+                O, O, O, I, O, O, O, I,
+            }; offset = {ORG, ORG}; bounds = MID; break;
+        case 'X': diagram = {
+                O, O, O, O, O, O, O, O,
+                I, O, I, O, I, O, I, O
+            }; offset = {ORG, ORG}; bounds = END; break;
+        case 'x': diagram = {
+                O, O, O, O, O, I, O, O,
+                O, O, O, I, I, I, O, I,
+            }; offset = {ORG, ORG}; bounds = MID; break;        
+        case 'Y': diagram = {
+                O, O, O, O, O, O, O, O,
+                I, O, I, O, O, I, O, O,
+            }; offset = {ORG, ORG}; bounds = MID; break;    
+        case 'y': diagram = {
+                O, I, O, O, O, I, O, I,
+                O, I, O, I, O, I, I, I,
+            }; offset = {ORG, MID}; bounds = MID; break;
+        case 'Z': diagram = {
+                I, I, O, O, I, I, O, O,
+                O, O, I, O, O, O, I, O
+            }; offset = {ORG, ORG}; bounds = END; break;
+        case 'z': diagram = {
+                O, O, O, O, O, I, O, O,
+                O, O, O, O, O, O, I, I,
+            }; offset = {ORG, ORG}; bounds = MID; break;
+            
+        case '0': diagram = {
+                I, I, I, I, I, I, I, I,
+                O, O, I, O, O, O, I, O,
+            }; offset = {ORG, ORG}; bounds = MID; break;
+        case '1': diagram = {
+                I, O, O, O, I, I, O, O,
+                O, I, O, O, O, I, O, O,
+            }; offset = {ORG, ORG}; bounds = MID; break;       
+        case '2': diagram = {
+                I, I, I, O, I, I, O, O,
+                O, O, O, I, O, O, I, O,
+            }; offset = {ORG, ORG}; bounds = MID; break;
+        case '3': diagram = {
+                I, I, O, I, I, I, O, O,
+                O, O, I, I, O, O, O, O,
+            }; offset = {ORG, ORG}; bounds = MID; break;
+        case '4': diagram = {
+                O, O, I, I, O, O, O, I,
+                O, O, O, I, O, O, O, I,
+            }; offset = {ORG, ORG}; bounds = MID; break;
+        case '5': diagram = {
+                I, I, O, O, I, I, O, I,
+                O, O, O, O, I, O, O, I,
+            }; offset = {ORG, ORG}; bounds = MID; break;       
+        case '6': diagram = {
+                I, O, O, I, I, I, I, I,
+                O, O, O, I, O, O, O, I,
+            }; offset = {ORG, ORG}; bounds = MID; break;
+        case '7': diagram = {
+                I, I, O, O, O, O, O, O,
+                O, O, I, I, O, I, O, I,
+            }; offset = {ORG, ORG}; bounds = MID; break;
+        case '8': diagram = {
+                I, O, O, I, I, I, I, I,
+                I, I, O, I, I, O, O, I
+            }; offset = {ORG, ORG}; bounds = END; break;
+        case '9': diagram = {
+                I, I, I, I, I, O, O, I,
+                O, O, O, I, O, O, O, I
+            }; offset = {ORG, ORG}; bounds = END; break;
+            
+        case '.': diagram = {
+                O, O, O, O, O, O, O, O,
+                O, O, O, O, O, O, O, O,
+                I
+            }; offset = {ORG, ORG}; bounds = ORG; break;
+        case ',': diagram = {
+                O, O, O, O, O, I, O, O,
+                O, O, O, O, O, I, O, O,
+            }; offset = {ORG, ORG}; bounds = ORG; break;
+        case ';': diagram = {
+                O, O, O, O, O, I, O, O,
+                O, O, O, O, O, I, O, O,
+                I
+            }; offset = {ORG, ORG}; bounds = MID; break;  
+        case ':': diagram = {
+                O, O, O, O, O, O, O, O,
+                O, O, O, O, O, I, O, O,
+                I
+            }; offset = {ORG, ORG}; bounds = MID; break;    
+        case '@': diagram = {
+                I, I, I, I, O, I, I, I,
+                O, O, O, O, I, I, O, I
+            }; offset = {ORG, ORG}; bounds = MID; break;
+        case '#': diagram = {
+                O, O, I, I, O, O, O, O,
+                O, I, O, I, O, I, O, I
+            }; offset = {ORG, ORG}; bounds = MID; break;    
+        case '!': diagram = {
+                I, O, O, O, O, O, O, O,
+                I, I, O, O, O, I, O, O,
+                O, I
+            }; offset = {ORG, ORG}; bounds = END; break;
+        case '"': diagram = {
+                O, O, I, O, O, O, O, O,
+                O, I, O, O, O, O, O, O
+            }; offset = {ORG, ORG}; bounds = END; break;
+        case '/': diagram = {
+                O, O, O, O, O, O, O, O,
+                O, O, I, O, O, O, I, O
+            }; offset = {ORG, ORG}; bounds = END; break; 
+        case '?': diagram = {
+                I, I, I, O, O, O, O, O,
+                O, O, O, I, O, I, O, O,
+                O, I
+            }; offset = {ORG, ORG}; bounds = END; break;
+        case '<': diagram = {
+                I, I, O, O, O, O, O, O,
+                I, O, O, O, I, O, O, O
+            }; offset = {ORG, ORG}; bounds = END; break; 
+        case '>': diagram = {
+                O, O, O, O, I, I, O, O,
+                I, O, O, O, I, O, O, O
+            }; offset = {ORG, ORG}; bounds = END; break;
+        case '%': diagram = {
+                O, O, O, I, O, O, O, I,
+                O, O, I, O, O, O, I, O
+            }; offset = {ORG, ORG}; bounds = END; break;
+        case '&': diagram = {
+                I, O, I, O, I, I, I, O,
+                I, I, O, I, I, O, O, I
+            }; offset = {ORG, ORG}; bounds = END; break;
+        case '(': diagram = {
+                O, O, O, O, O, O, O, O,
+                O, O, I, O, I, O, O, O
+            }; offset = {ORG, ORG}; bounds = END; break;
+        case ')': diagram = {
+                O, O, O, O, O, O, O, O,
+                I, O, O, O, O, O, I, O,
+            }; offset = {ORG, ORG}; bounds = MID; break;
+        case '$': diagram = {
+                I, I, O, I, I, I, O, I,
+                O, I, O, I, O, I, O, I
+            }; offset = {ORG, ORG}; bounds = END; break;
+
+        case '*': diagram = {
+                O, O, O, O, O, O, O, O,
+                I, O, I, I, I, O, O, I
+            }; offset = {ORG, ORG}; bounds = END; break; 
+        case '+': diagram = {
+                O, O, O, O, O, O, O, O,
+                O, I, O, I, O, I, O, I
+            }; offset = {ORG, ORG}; bounds = END; break; 
+        case '-': diagram = {
+                O, O, O, O, O, O, O, O,
+                O, O, O, I, O, O, O, I
+            }; offset = {ORG, ORG}; bounds = END; break;
+        case '=': diagram = {
+                O, O, O, O, I, I, O, O,
+                O, O, O, I, O, O, O, I
+            }; offset = {ORG, ORG}; bounds = END; break; 
+                                                                      
+        default:
+            diagram = {
+                O, O, O, O, O, O, O, O,
+                O, O, O, O, O, O, O, O
+            }; offset = {ORG, ORG}; bounds = END; break;
+        }

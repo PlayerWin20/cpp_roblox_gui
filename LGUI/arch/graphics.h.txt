@@ -1,0 +1,80 @@
+#pragma once
+#include "math.h"
+#include <raylib.h>
+
+#include "gmath.h"
+using namespace GMath;
+
+namespace Graphics {
+    struct UDim2 {
+        GVec2i offset {0, 0};
+        GVec2i scale  {0, 0};
+    };
+    
+    struct Color4 {
+        int r;
+        int g;
+        int b;
+        int a;
+        RAYLIB_H::Color asRL() {
+            return RAYLIB_H::Color {
+                r, g, b, a
+            };
+        };
+    };
+
+    void DrawPixel (
+            GVec2i pos,
+            Color4 color
+    ) {
+        RAYLIB_H::DrawPixel(
+            pos .x, pos .y,
+            color.asRL()
+        );
+    };
+
+    void DrawLine (
+        GVec2i startPos,
+        GVec2i endPos,
+        Color4 color
+    ) {
+        RAYLIB_H::DrawLine(
+            startPos.x, startPos.y,
+            endPos  .x, endPos  .y,
+            color.asRL()
+        );
+    };
+
+    void DrawRect (
+                GVec2i pos,
+                GVec2i size,
+                Color4 color,
+
+                float rads
+    ) {
+        float anchorX = 0.5;
+        float anchorY = 0.5;
+        GVec2i center = GVec2f{size.x, size.y} * GVec2f{anchorX, anchorY};
+
+        //localized points
+        GVec2i A = pos + size * GVec2f{0, 0} - center;
+        GVec2i B = pos + size * GVec2f{1, 0} - center;
+        GVec2i C = pos + size * GVec2f{1, 1} - center;
+        GVec2i D = pos + size * GVec2f{0, 1} - center;
+
+        GMatrix2x2f mat_rads {
+            cos(rads), -sin(rads),
+            sin(rads),  cos(rads),
+        };
+
+        GVec2f tA = mat_rads.transform( GVec2f {A.x, A.y} );
+        GVec2f tB = mat_rads.transform( GVec2f {B.x, B.y} );
+        GVec2f tC = mat_rads.transform( GVec2f {C.x, C.y} );
+        GVec2f tD = mat_rads.transform( GVec2f {D.x, D.y} );
+
+        DrawLine ( center+tA, center+tB, color );
+        DrawLine ( center+tB, center+tC, color );
+        DrawLine ( center+tC, center+tD, color );
+        DrawLine ( center+tD, center+tA, color );
+    };
+};
